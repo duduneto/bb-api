@@ -30,7 +30,7 @@ const addClienteSimulation = (req, resp, next) => {
             var transporter = nodemailer.createTransport(smtpConfig);
             const mailOptions = {
                 from: 'gulizraizer@gmail.com', // sender address
-                to: ['dudumatosneto@gmail.com','mariliaduarteneto@gmail.com'], // list of receivers
+                to: ['dudumatosneto@gmail.com','gl_borges@icloud.com'], // list of receivers
                 subject: 'Pedido de Simulação', // Subject line
                 html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
                 <html xmlns="http://www.w3.org/1999/xhtml">

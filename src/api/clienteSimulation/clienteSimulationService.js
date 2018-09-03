@@ -1,16 +1,18 @@
 const Cliente = require('./clienteSimulation.js');
 const nodemailer = require('nodemailer');
+const template = require('./emailTemplate/email');
 
 Cliente.methods(['post', 'get']);
 
 const addClienteSimulation = (req, resp, next) => {
+    const seguro = req.body.seguro;
     const nome = req.body.nome;
     const email = req.body.email;
     const telefone = req.body.telefone;
     const cep = req.body.cep;
 
-    console.log(nome, email, telefone, cep);
-    const newCliente = new Cliente({nome,email,telefone,cep});
+    console.log(seguro, nome, email, telefone, cep);
+    const newCliente = new Cliente({seguro,nome,email,telefone,cep});
     newCliente.save(err => {
         if(err){
             resp.status(400).send({ erro: ['Houve algum erro']});
@@ -27,10 +29,11 @@ const addClienteSimulation = (req, resp, next) => {
                     pass: 'fetho.100203'
                 }
             }
+            console.log(template);
             var transporter = nodemailer.createTransport(smtpConfig);
             const mailOptions = {
                 from: 'gulizraizer@gmail.com', // sender address
-                to: ['dudumatosneto@gmail.com','gl_borges@icloud.com'], // list of receivers
+                to: ['dudumatosneto@gmail.com'], // list of receivers
                 subject: 'Pedido de Simulação', // Subject line
                 html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
                 <html xmlns="http://www.w3.org/1999/xhtml">

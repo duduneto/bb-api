@@ -1,5 +1,5 @@
 
-const template = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+`<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="viewport" content="width=device-width" />
@@ -26,7 +26,7 @@ const template = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
                                 </tr>
                                 <tr>
                                     <td class="content-block">
-                                        <h2 class="aligncenter">${nome}</h2>
+                                        <h2 class="aligncenter">Francisco</h2>
                                     </td>
                                 </tr>
                                 <tr>
@@ -40,15 +40,15 @@ const template = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
                                                     <table class="invoice-items" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td>Email:</td>
-                                                            <td class="alignright">${email}</td>
+                                                            <td class="alignright">francisco@email.com</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Telefone</td>
-                                                            <td class="alignright">${telefone}</td>
+                                                            <td class="alignright">TELEFONE</td>
                                                         </tr>
                                                         <tr>
                                                             <td>CEP</td>
-                                                            <td class="alignright">${cep}</td>
+                                                            <td class="alignright">CEP</td>
                                                         </tr>
                                                         
                                                     </table>
@@ -75,5 +75,4 @@ const template = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 </table>
 
 </body>
-</html>`;
-module.exports = template;
+</html>`
